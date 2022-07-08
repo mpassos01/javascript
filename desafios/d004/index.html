@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font: normal 1em arial;
+        }
+
+        div#botao {
+            padding: 15px;
+            border: 1px solid black;
+            width: 180px;
+            text-align: center;
+            background-color: grey;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculando o troco</h1>
+
+    <div id="botao" onclick="verificar()">Comprar produto</div>
+
+    <script>
+        function verificar() {
+            var item = window.prompt("Que produto você está comprando?")
+            var preço = window.prompt(`Quanto custa ${item} que você está comprando?`)
+            var pago = window.prompt(`Qual foi o valor que você deu para pagar ${item}?`)
+            var troco = pago - preço
+            var s = troco.toFixed(2)
+
+            window.confirm(`Você comprou ${item} que custou R$ ${preço}.\nDeu R$ ${pago} em dinheiro e vai receber R$ ${s} de troco.\nVolte sempre!` )
+        }
+    </script>    
+</body>
+</html>

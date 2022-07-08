@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio antes e depois</title>
+    <style>
+        body {
+            font: normal 1em arial;
+        }
+
+        div#valor {
+            padding: 15px;
+            border: 1px solid black;
+            width: 180px;
+            text-align: center;
+            background-color: grey;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Antes e depois</h1>
+    <div id="valor" onclick="verificar()">Antecessor e sucessor</div>
+
+    <script>
+        function verificar() {
+            var n = Number(window.prompt('Digite um número qualquer'))
+            var antes = n - 1
+            var depois = n + 1
+
+            window.confirm(`Antes de ${n}, temos ${antes}.\nDepois de ${n}, temos ${depois}.`)
+        }
+    </script>    
+</body>
+</html>

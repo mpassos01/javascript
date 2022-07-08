@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de medidas</title>
+    <style>
+        body {
+            font: normal 1em arial;
+        }
+
+        div#botao {
+            padding: 15px;
+            border: 1px solid black;
+            width: 180px;
+            text-align: center;
+            background-color: grey;
+            color: white;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1></h1>
+
+    <div id="botao" onclick="conversor()">Conversor de medidas</div>
+    
+
+    <div id="res">Clique no botão acima para iniciar</div>
+
+    <script>
+        function conversor() {
+            var numero = window.prompt("Digite uma medida em metros (m)")
+            var kilometro = numero / 1000
+            var hectometro = numero / 100
+            var decametro = numero / 10
+            var decimetro = numero * 10
+            var centimetro = numero * 100
+            var milimetro = numero * 1000
+        }
+        res.innerHTML =`A medida de ${numero} metros, corresponde a...`
+
+    </script>    
+</body>
+</html>
