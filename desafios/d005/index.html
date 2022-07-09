@@ -26,22 +26,31 @@
 <body>
     <h1></h1>
 
-    <div id="botao" onclick="conversor()">Conversor de medidas</div>
+    <div id="botao" value="Alert" onclick="conversor()">Conversor de medidas</div>
     
 
     <div id="res">Clique no botão acima para iniciar</div>
 
     <script>
         function conversor() {
-            var numero = window.prompt("Digite uma medida em metros (m)")
+            var numero = Number(window.prompt(`Digite uma medida em metros (m)`))
             var kilometro = numero / 1000
             var hectometro = numero / 100
             var decametro = numero / 10
             var decimetro = numero * 10
             var centimetro = numero * 100
             var milimetro = numero * 1000
+
+            res.innerHTML=`<h2>A medida de ${numero} metros, corresponde a...</h2>
+            <p>${kilometro} quilômetros (Km)</p>
+            <p>${hectometro} Hectometros (Hm)</p>
+            <p>${decametro} decâmetros (Dam)</p>
+            <p>${decimetro} decímetros (dm)</p>
+            <p>${centimetro} centímetros (cmm)</p>
+            <p>${milimetro} milímetros (km)</p>`
         }
-        res.innerHTML =`A medida de ${numero} metros, corresponde a...`
+        
+        
 
     </script>    
 </body>
