@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de temperaturas</title>
+    <style>
+        body {
+            font: normal 1em arial;
+        }
+
+        div#botao {
+            padding: 15px;
+            border: 1px solid black;
+            width: 180px;
+            text-align: center;
+            background-color: grey;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de temperaturas</h1>
+
+    <div id="botao" onclick="converter()">Converter</div>
+
+    <div id="res"><p>Clique no botão acima para converter temperaturas de Celsius (°C) para Kelvin (°K) e Fahrenheit (°F).</p></div>
+
+    <script>
+        function converter() {
+            var celsius = Number(window.prompt(`Digite uma temperatura em °C Celsius.`))
+            var kelvin = celsius + 273.15
+            var fahrenheit = (celsius * 9/5) + 32
+
+            res.innerHTML=`<h2>A temperatura de ${celsius}°C, corresponde a...</h2>
+            <p>${kelvin}°K (Kelvin)</p>
+            <p>${fahrenheit}°F (Fahrenheit)</p>`
+        }
+
+    </script>    
+</body>
+</html>
