@@ -34,12 +34,12 @@
     <script>
         function conversor() {
             var numero = Number(window.prompt(`Digite uma medida em metros (m)`))
-            var kilometro = Number.parseFloat(numero) / 1000
-            var hectometro = numero / 100
-            var decametro = numero / 10
-            var decimetro = numero * 10
-            var centimetro = numero * 100
-            var milimetro = numero * 1000
+            var kilometro = (numero / 1000).toLocaleString('pt-BR')
+            var hectometro = (numero / 100).toLocaleString('pt-BR')
+            var decametro = (numero / 10).toLocaleString('pt-BR')
+            var decimetro = (numero * 10).toLocaleString('pt-BR')
+            var centimetro = (numero * 100).toLocaleString('pt-BR')
+            var milimetro = (numero * 1000).toLocaleString('pt-BR')
 
             res.innerHTML = `<h2>A medida de ${numero} metros, corresponde a...</h2>
             <p>${kilometro} quilômetros (Km)</p>

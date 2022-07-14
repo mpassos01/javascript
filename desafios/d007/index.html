@@ -32,9 +32,9 @@
         var cotação = window.prompt('Antes de mais nada, qual a cotação do dólar hoje?')
         function converter() {
             var entrada = Number(window.prompt(`Quantos R$ (reais) você tem na carteira`))
-            var real = parseFloat(entrada.toFixed(2))
+            var real = parseFloat(entrada)
             var conversao =  entrada / cotação
-            var dolar = parseFloat(conversao.toFixed(2))
+            var dolar = parseFloat(conversao.toFixed(2).toLocaleString('en-US'), {style: 'currency', currency: 'USD'})
 
             res.innerHTML = `<p>O valor de R$ ${real} é equivalente a US$ ${dolar}</p>`
         }
