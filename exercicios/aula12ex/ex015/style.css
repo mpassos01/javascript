@@ -31,7 +31,12 @@ section p {
 }
 
 #res { 
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    flex-wrap: wrap;
 }
 
 footer {

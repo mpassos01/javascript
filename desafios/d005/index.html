@@ -34,7 +34,7 @@
     <script>
         function conversor() {
             var numero = Number(window.prompt(`Digite uma medida em metros (m)`))
-            var kilometro = numero / 1000
+            var kilometro = Number.parseFloat(numero) / 1000
             var hectometro = numero / 100
             var decametro = numero / 10
             var decimetro = numero * 10
@@ -46,7 +46,7 @@
             <p>${hectometro} Hectometros (Hm)</p>
             <p>${decametro} decâmetros (Dam)</p>
             <p>${decimetro} decímetros (dm)</p>
-            <p>${centimetro} centímetros (cmm)</p>
+            <p>${centimetro} centímetros (cm)</p>
             <p>${milimetro} milímetros (km)</p>`
         }
         
